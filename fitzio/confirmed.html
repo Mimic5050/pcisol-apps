@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Email confirmed · Fitzio</title>
+  <link rel="icon" href="icon.png" />
+  <style>
+    :root { --bg: #f2f5f1; --fg: #15211b; --muted: #5b6a62; --accent: #1d7a50; --card: #fff; --line: #dbe2dc; }
+    @media (prefers-color-scheme: dark) { :root { --bg: #0e1411; --fg: #e5ece8; --muted: #93a39a; --accent: #4cc28a; --card: #17201b; --line: #28332d; } }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif; }
+    main { max-width: 480px; margin: 0 auto; padding: 64px 16px; text-align: center; }
+    img { width: 72px; height: 72px; border-radius: 16px; }
+    h1 { font-size: 1.6rem; margin: 16px 0 8px; }
+    p { color: var(--muted); }
+    .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 16px; margin-top: 24px; }
+    a { color: var(--accent); }
+  </style>
+</head>
+<body>
+<main>
+  <img src="icon.png" alt="" />
+  <div id="ok">
+    <h1>Your email is confirmed</h1>
+    <p>Go back to Fitzio and tap <strong>Continue</strong>, or sign in with the same email and password.</p>
+    <div class="card"><p>Signed out? In the app open <strong>Account → Sign in</strong>.</p></div>
+  </div>
+  <div id="failed" hidden>
+    <h1>This link has expired or was already used</h1>
+    <p>Your email isn't confirmed yet. Open the newest Fitzio email and tap its button. If several are grouped in one thread, use the last one.</p>
+    <div class="card"><p>No new email? In the app, create the account again with the same email and password to get a fresh link.</p></div>
+  </div>
+  <p style="margin-top:32px;font-size:14px">Fitzio by PCI Solutions · <a href="support.html">Support</a></p>
+</main>
+<script>
+  // Supabase sends people here with #error=... when the link is invalid or expired.
+  const hash = new URLSearchParams(location.hash.slice(1));
+  if (hash.has('error') || hash.has('error_code')) {
+    document.getElementById('ok').hidden = true;
+    document.getElementById('failed').hidden = false;
+    document.title = 'Link expired · Fitzio';
+  }
+  // Don't leave tokens or error details in the address bar.
+  if (location.hash) history.replaceState(null, '', location.pathname);
+</script>
+</body>
+</html>

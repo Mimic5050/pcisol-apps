@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fitzio Support</title>
+  <link rel="icon" href="icon.png" />
+  <style>
+    :root { --bg: #f2f5f1; --fg: #15211b; --muted: #5b6a62; --accent: #1d7a50; --card: #fff; --line: #dbe2dc; }
+    @media (prefers-color-scheme: dark) { :root { --bg: #0e1411; --fg: #e5ece8; --muted: #93a39a; --accent: #4cc28a; --card: #17201b; --line: #28332d; } }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif; }
+    main { max-width: 720px; margin: 0 auto; padding: 32px 16px 64px; }
+    header { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
+    header img { width: 48px; height: 48px; border-radius: 11px; }
+    h1 { font-size: 1.75rem; margin: 0; }
+    h2 { font-size: 1.15rem; margin: 2rem 0 0.5rem; }
+    p, li { color: var(--muted); }
+    strong { color: var(--fg); }
+    a { color: var(--accent); }
+    table { width: 100%; border-collapse: collapse; background: var(--card); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; font-size: 0.95rem; }
+    th, td { text-align: left; vertical-align: top; padding: 10px 12px; border-bottom: 1px solid var(--line); }
+    th { color: var(--fg); }
+    td { color: var(--muted); }
+    tr:last-child td { border-bottom: 0; }
+    .wrap { overflow-x: auto; }
+    .meta { font-size: 0.9rem; }
+    .contact { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 16px; }
+    .contact a { font-weight: 700; font-size: 1.1rem; }
+    details { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 12px 16px; margin: 8px 0; }
+    summary { cursor: pointer; font-weight: 600; color: var(--fg); }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <img src="icon.png" alt="" />
+    <h1>Fitzio Support</h1>
+  </header>
+  <p>Fitzio puts your coach’s diet and training plan on your phone: log meals and workouts, and check in every week. Made by PCI Solutions.</p>
+
+  <div class="contact">
+    <p><strong>Need help or have an idea?</strong> Email us and we’ll reply as soon as we can.</p>
+    <a href="mailto:pcisolutionsuk@gmail.com?subject=Fitzio%20support">pcisolutionsuk@gmail.com</a>
+  </div>
+
+  <h2>Common questions</h2>
+  <details>
+    <summary>How do I add my coach’s plan?</summary>
+    <p>Open the Plans tab. Import your trainer’s Word (.docx) document, or create the diet and workout plans yourself. When your coach sends a new plan, add it as a new version with its start date; the old one is kept.</p>
+  </details>
+  <details>
+    <summary>How does the food tracking work?</summary>
+    <p>Each meal in your plan is made of portions. Fill each portion once a day with any of the foods your plan allows, in whichever meal suits you. The Food tab shows what’s left, and warns you if you’ve already had a food that day.</p>
+  </details>
+  <details>
+    <summary>Can I bring in my old workouts?</summary>
+    <p>Yes. On the Train tab, import a workout CSV export (Strong format) from another workout app.</p>
+  </details>
+  <details>
+    <summary>Does Fitzio work offline?</summary>
+    <p>Yes. Everything is stored on your phone and works without internet.</p>
+  </details>
+  <details>
+    <summary>Where are my progress photos kept?</summary>
+    <p>Only on your phone, inside the app. They aren’t uploaded anywhere.</p>
+  </details>
+  <details>
+    <summary>Do I need an account?</summary>
+    <p>No. Choose “Use without an account” and everything stays on your phone. Sign in (email, Google or Apple) if you want your data backed up and on more than one phone, or to read plans with AI.</p>
+  </details>
+  <details id="delete">
+    <summary>How do I delete my account and data?</summary>
+    <p>Open the Account screen and tap <strong>Delete account</strong>, then type DELETE to confirm. This deletes your sign-in and everything synced to our servers. To clear the phone too, delete the app. You can also email us and we’ll delete it for you.</p>
+  </details>
+
+  <h2>Privacy</h2>
+  <p>Read the <a href="privacy.html">Fitzio privacy policy</a>.</p>
+</main>
+</body>
+</html>
