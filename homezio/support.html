@@ -34,7 +34,7 @@
 
   <div class="contact">
     <p><strong>Need help or have an idea?</strong> Email us and we’ll reply as soon as we can.</p>
-    <a href="mailto:pcisolutionsuk@gmail.com?subject=Homezio%20support">pcisolutionsuk@gmail.com</a>
+    <a href="mailto:support@pcisol.co.uk?subject=Homezio%20support">support@pcisol.co.uk</a>
   </div>
 
   <h2>Common questions</h2>
@@ -58,13 +58,18 @@
     <summary>Does Homezio work offline?</summary>
     <p>Yes. Tapping items, the shopping list and forecasts all work without internet. Changes sync to the household’s other phones when you’re back online.</p>
   </details>
-  <details>
+  <details id="delete">
     <summary>How do I delete my account and data?</summary>
-    <p>Go to Settings → Delete account (or Erase data on a phone without an account) and type DELETE to confirm. See the <a href="privacy.html">privacy policy</a> for exactly what is removed.</p>
+    <p>Go to Settings → Delete account (or Erase data on a phone without an account) and type DELETE to confirm. See the <a href="privacy">privacy policy</a> for exactly what is removed.</p>
   </details>
 
   <h2>Privacy</h2>
-  <p>Read the <a href="privacy.html">Homezio privacy policy</a>.</p>
+  <p>Read the <a href="privacy">Homezio privacy policy</a>.</p>
 </main>
+<script>
+  // Open the linked question, e.g. support#delete from the store listing.
+  const target = location.hash && document.getElementById(location.hash.slice(1));
+  if (target && target.tagName === "DETAILS") target.open = true;
+</script>
 </body>
 </html>

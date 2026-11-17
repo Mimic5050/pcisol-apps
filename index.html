@@ -1,4 +1,64 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>PCI Solutions Apps</title>
-<style>body{margin:0;font:16px/1.6 system-ui,-apple-system,sans-serif;background:#fafaf9;color:#1c1917}main{max-width:720px;margin:0 auto;padding:32px 16px}a{color:#047857}@media (prefers-color-scheme:dark){body{background:#0c0a09;color:#f5f5f4}a{color:#34d399}}</style></head>
-<body><main><h1>PCI Solutions</h1><h2>Homezio</h2><p><a href="homezio/support.html">Support</a> · <a href="homezio/privacy.html">Privacy policy</a></p><h2>Fitzio</h2><p><a href="fitzio/support.html">Support</a> · <a href="fitzio/privacy.html">Privacy policy</a></p><p>Contact: <a href="mailto:pcisolutionsuk@gmail.com">pcisolutionsuk@gmail.com</a></p></main></body></html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PCI Solutions</title>
+  <meta name="description" content="PCI Solutions makes simple mobile apps for everyday life: Homezio for the household and Fitzio for diet and training plans." />
+  <style>
+    :root { --bg: #fafaf9; --fg: #1c1917; --muted: #57534e; --accent: #047857; --card: #fff; --line: #e7e5e4; }
+    @media (prefers-color-scheme: dark) { :root { --bg: #0c0a09; --fg: #f5f5f4; --muted: #a8a29e; --accent: #34d399; --card: #1c1917; --line: #292524; } }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif; }
+    main { max-width: 720px; margin: 0 auto; padding: 48px 16px 64px; }
+    h1 { font-size: 2rem; margin: 0 0 8px; letter-spacing: -0.01em; }
+    h2 { font-size: 1.15rem; margin: 2.5rem 0 0.75rem; }
+    p { color: var(--muted); margin: 0 0 12px; }
+    a { color: var(--accent); }
+    .lead { font-size: 1.1rem; }
+    .apps { display: grid; gap: 12px; }
+    .app { display: flex; gap: 16px; align-items: flex-start; background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 16px; }
+    .app img { width: 56px; height: 56px; border-radius: 13px; flex: none; }
+    .app h3 { margin: 0 0 4px; font-size: 1.1rem; }
+    .app p { margin: 0 0 8px; }
+    .links { font-size: 0.95rem; }
+    .contact { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 16px; }
+    .contact a { font-weight: 700; font-size: 1.1rem; }
+    footer { margin-top: 48px; font-size: 0.9rem; color: var(--muted); }
+  </style>
+</head>
+<body>
+<main>
+  <h1>PCI Solutions</h1>
+  <p class="lead">We make simple mobile apps for everyday life, for iPhone and Android.</p>
+
+  <h2>Our apps</h2>
+  <div class="apps">
+    <div class="app">
+      <img src="homezio/icon.svg" alt="" />
+      <div>
+        <h3>Homezio</h3>
+        <p>See what’s running low at home, what to buy next and what your household spends.</p>
+        <p class="links"><a href="homezio/support">Support</a> · <a href="homezio/privacy">Privacy policy</a></p>
+      </div>
+    </div>
+    <div class="app">
+      <img src="fitzio/icon.png" alt="" />
+      <div>
+        <h3>Fitzio</h3>
+        <p>Your coach’s diet and training plan on your phone: log meals and workouts, and check in every week.</p>
+        <p class="links"><a href="fitzio/support">Support</a> · <a href="fitzio/privacy">Privacy policy</a></p>
+      </div>
+    </div>
+  </div>
+
+  <h2>Contact</h2>
+  <div class="contact">
+    <p>Questions, feedback or a data request? Email us and we’ll reply as soon as we can.</p>
+    <a href="mailto:support@pcisol.co.uk">support@pcisol.co.uk</a>
+  </div>
+
+  <footer>© PCI Solutions</footer>
+</main>
+</body>
+</html>
